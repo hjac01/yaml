@@ -1,0 +1,40 @@
+person: 
+  name: &name "mike"
+  occupation: 'programmer'
+  age: !!float 23  #23.0
+  gpa: !!str 3.5  #"3.5"
+  fav_num: 1e+10
+  male: true
+  birthday: 1994-02-06 14:33:22        #ISO 8601
+  flaws: null
+  hobbies: 
+    -hiking
+    -movies
+  movies: ["Dark Knight", "Good Will Hunting"]
+  friends: 
+    -name: "Steph"
+    -age: 22
+    -{name: "Adam", age: 22}
+    -
+      name: "joe"
+      age: 23
+    description: >
+      text formatting using tab
+      text formatting using tab
+    signature: |
+      Mike
+        Academy
+      email@test.com
+    id: *name #'mike'
+
+    base: &base 
+      var1: value1
+
+    foo: 
+      <<: *base #var1: value1
+      var2: value 2
+
+
+    
+
+
